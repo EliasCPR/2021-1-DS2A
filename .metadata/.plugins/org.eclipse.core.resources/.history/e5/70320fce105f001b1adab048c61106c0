@@ -1,0 +1,10 @@
+package br.senai.sp.jandira.model;
+
+public class Cliente {
+	
+	private String nome;
+	String cpf;
+	String telefone;
+	String cep;
+	
+}

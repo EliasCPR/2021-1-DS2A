@@ -1,5 +1,6 @@
 package br.senai.sp.jandira;
 
+import br.senai.sp.jandira.model.Cliente;
 import br.senai.sp.jandira.model.Conta;
 
 public class App {
@@ -7,39 +8,41 @@ public class App {
 	public static void main(String[] args) {
 
 		
-		Conta contaDaAna = new Conta();
+		Conta contaDaAnaGomes = new Conta();
 		Conta contaDoJoao = new Conta();
 		
-		contaDaAna.titular = "Ana Gomes";
-		contaDaAna.numero = "111-98";
-		contaDaAna.tipo = "Corrente";
-		contaDaAna.ativa = true;
-		contaDaAna.chequeEspecial = 200;
-		contaDaAna.depositar(100);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.depositar(30);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(50);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(500);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(50);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.sacar(80);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.depositar(100);
-		contaDaAna.mostrarSaldoDaConta();
-		contaDaAna.getSaldo();
+		//contaDaAnaGomes.setTitular("Ana Gomes");
+		contaDaAnaGomes.setNumero("111-98");
+		contaDaAnaGomes.setTipo("Corrente");
+		contaDaAnaGomes.setAtiva(true);
+		contaDaAnaGomes.setChequeEspecial(200);
+		contaDaAnaGomes.depositar(100);
+		contaDaAnaGomes.mostrarSaldoDaConta();
+		contaDaAnaGomes.depositar(30);
+		contaDaAnaGomes.mostrarSaldoDaConta();
+		contaDaAnaGomes.sacar(50);
+		contaDaAnaGomes.mostrarSaldoDaConta();
+		contaDaAnaGomes.sacar(500);
+		contaDaAnaGomes.mostrarSaldoDaConta();
+		contaDaAnaGomes.sacar(50);
+		contaDaAnaGomes.mostrarSaldoDaConta();
+		contaDaAnaGomes.sacar(80);
+		contaDaAnaGomes.mostrarSaldoDaConta();
+		contaDaAnaGomes.depositar(100);
+		contaDaAnaGomes.mostrarSaldoDaConta();
 		
-		int a = somar(10, 5);
+		double valorSaldo = contaDaAnaGomes.getSaldo();
 		
+		//System.out.println("Nome:"+ contaDaAnaGomes.getTitular());
+		System.out.println("Conta:" + contaDaAnaGomes.getNumero());
+		System.out.println("limite:" + contaDaAnaGomes.getChequeEspecial());
+		System.out.println("tipo:" + contaDaAnaGomes.getTipo());
+		
+		Cliente cliente = new Cliente();
 		
 		
 	}
 	
-	public static int somar(int valor1, int valor2) {
-		int resultado = valor1 + valor2;
-		return resultado;
-	}
+
 
 }
